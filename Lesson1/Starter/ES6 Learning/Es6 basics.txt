@@ -1,0 +1,123 @@
+Es6 makes life easier
+
+Instead of 
+	var name= "Naylee", 
+you say 
+	let name= "Naylee"
+
+
+Every-time its wrapped in  {}, it creates a new scope
+
+e.g.
+
+let a=8;
+
+function test(){
+	let a=10; 
+	console. log =10
+}
+
+console. log =8
+
+
+const means, constant, so
+	const player =5;
+
+the constant is 5
+
+
+But u can do:
+
+const object={
+	player="bob";
+	experience="5";
+
+}
+
+and change the value for player n object..... object.player="Tess"
+
+
+instead of:
+
+const player= obj.player
+const experience= obj.experience
+
+u can just do 
+	
+	const {player, experience}=obj;
+or
+	let{player}=obj;
+
+
+
+Previously when making an object it was:
+	
+	const a = "Simon"
+	const b = true
+	const c = {};
+
+then it would be
+	
+	const object=
+	{
+		a:a;
+		b:b;
+
+	}
+
+Now u can do
+
+const object=
+	{
+		a,
+		b,
+		c
+
+	}
+
+Then instead of
+
+	"Hi"+ name+ "How are you"
+
+it is just, 
+	
+	`Hi ${name}. How are you` 
+
+In a function setting, you can use it to create a default value
+
+function greet(name='', age=30, pet='cat'){
+	return `Hi ${name}. How are you. You have a nice ${cat}` 
+}
+
+then you can add a parameter
+
+greet("Naylee", 21, "cow")
+
+
+A symbol is unique.
+
+let s1= symbol ('ff');
+let s2= symbol ('ff');
+
+s1===s2 is false
+
+ARROW Functions
+
+Instead of 
+
+	function add(a,b)
+	{
+   		return a+b;
+
+	}
+
+you can do:
+	
+	const add = (a,b) => a+b;
+
+
+
+
+
+
+

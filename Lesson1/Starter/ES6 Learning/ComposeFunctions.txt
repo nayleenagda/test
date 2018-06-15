@@ -1,0 +1,29 @@
+Compose
+
+Output of one function is the input of another function
+
+	constant compose = (f,g)=> (a)=> f(g(a))
+
+	const sum= (num)=> num+1;
+
+	compose (sum,sum)(5);
+	
+
+This means
+
+	constant compose = (f,g)=> (a)=> f(g(a))
+	
+	constant compose = (f,g)=> (a)=> f(g(5))
+	
+	= 6
+
+Then
+
+	constant compose = (f,g)=> (a)=> f(6))
+	
+= 7
+
+Answer is 7!
+
+	
+

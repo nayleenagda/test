@@ -1,0 +1,63 @@
+Closures
+
+	Closures are nothing but FUNCTIONS WITH PRESERVED DATA
+	It helps get a value that is local to a function. You can access the same value out of a function.
+	
+	
+	function rainbow(){
+	
+		var counter=0;
+		
+		function unicorn()
+		{
+		
+		}	
+	
+	}
+	
+	Every-time function rainbow is called, the counter variable is made again and again in memory. 
+	If it's called twice, the variable is made twice. This means the function unicorn is also declared
+	and runs twice which can make it inefficient
+	
+	
+	Example 1
+	
+	function personName(pName)
+	{
+		var _name= pName;
+		
+		this.getName= function(){
+			return _name;
+		}
+	
+	
+	}
+	
+	
+	var me= "Naylee"
+	
+	me.getName --- U will see  Naylee
+	
+	
+	Example 2
+	
+	//The parent function will be run first and never be run again but it's value will still be referred
+	to
+	
+	const first = () =>{
+		const greet= "hi';
+		
+		const second = () => 
+		
+		{
+			const name= "bobby";
+			alert (greet);
+		
+		}
+		
+		return second
+	}
+	
+	const newFunction= first();
+	newFunction();
+

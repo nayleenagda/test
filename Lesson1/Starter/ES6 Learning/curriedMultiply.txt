@@ -1,0 +1,47 @@
+Currying
+
+
+Accepts only one parameter at at time
+
+So instead of function Add (a,b){}... We are doing function Add (a)... and then inside it we will have B
+
+
+		function curriedMultiply (a){
+	
+			return function (b){
+				return a*b;
+			};
+
+
+		};
+		
+		
+If we write in Es6 format, it is:
+
+	function curriedMultiply =(a)=> (b) => a*b;
+	
+	
+
+And you call it
+
+curriedMultiply (3)(4);
+
+Importance:
+
+
+* If we want to multiply the value by 5, instead of having to keep change the function, you just write
+
+
+	var multiplyBy5= curriedMultiply(5)
+
+
+so u write... 
+	
+	
+	multiplyBy5(11)
+	
+		This means 5*11 55
+	
+	or multiplyBy5(5)
+	
+		This means 5*5 =25

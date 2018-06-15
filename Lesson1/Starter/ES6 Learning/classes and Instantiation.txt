@@ -1,0 +1,49 @@
+Classes and Instantiation
+
+class Player {
+
+//always have a constructor to set default values
+
+	constructor(name, type){
+		console.log('player', this);
+		this.name= name
+		this.type=type;
+	
+	}
+	
+	introduce (){
+		console.log(`Hi I am ${this.name} and I'm a ${this.type}` );
+	
+	}
+
+
+}
+
+
+//can acces functions from player
+
+class wizard extends Player
+
+{
+	constructor(name, type){
+		//get it from the player function hence need to call super
+		super(name,type)
+	
+	}
+	
+	play(){
+	
+		console.log("WEEEEE")
+	
+	}
+
+
+}
+
+
+
+The benefits of this, u just do
+
+const wizard1 = new Wizard ("Shelly", "Healer");
+
+const wizard2 = new Wizard ("Shawn", "Dark Magic");
